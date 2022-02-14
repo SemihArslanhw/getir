@@ -1,0 +1,18 @@
+package com.getir.dataAccess.abstracts;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.getir.entities.concretes.Category;
+
+@Repository
+public interface CategoryDao extends JpaRepository<Category, Integer> {
+
+
+
+	List<Category> getBySuperCategory_CategoryId(int id);
+
+
+}
